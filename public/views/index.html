@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html ng-app="grocApp">
+  <head>
+    <title>Grocery List</title>
+    <meta charset="utf-8">
+    <script src="vendors/angular/angular.min.js" charset="utf-8"></script>
+    <script src="scripts/grocApp.module.js" charset="utf-8"></script>
+    <script src="scripts/DataService.js" charset="utf-8"></script>
+    <script src="scripts/mainController.js" charset="utf-8"></script>
+
+  </head>
+  <body ng-controller="MainController">
+    <h1>Grocery List</h1>
+    <!-- {{5+6}} -->
+    <form>
+    <input type="text" ng-model="newGroc" />
+    <input type="number" ng-model="grocQuant" />
+    <button ng-click="submit()">Add!!</button>
+  </form>
+
+    <ul>
+      <li ng-repeat="food in list">{{food}}, {{grocQuant}}
+        <button id="{{task}}" ng-click="removeItem(task)">x</button>
+
+      </li>
+    </ul>
+
+
+  </body>
+</html>
